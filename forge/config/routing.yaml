@@ -1,0 +1,55 @@
+version: 1
+default_budget_usd: 2.0
+max_fix_loops: 3
+step_timeout_seconds: 120
+
+roles:
+  planner:
+    model: "gemini/gemini-1.5-flash"
+    fallback_model: "gpt-4o-mini"
+    prompt_version: "v1"
+    temperature: 0.2
+  frontend:
+    model: "gemini/gemini-1.5-flash"
+    fallback_model: "gpt-4o-mini"
+    prompt_version: "v1"
+    temperature: 0.1
+  backend:
+    model: "gemini/gemini-1.5-flash"
+    fallback_model: "gpt-4o-mini"
+    prompt_version: "v1"
+    temperature: 0.1
+  ml:
+    model: "gemini/gemini-1.5-flash"
+    fallback_model: "gpt-4o-mini"
+    prompt_version: "v1"
+    temperature: 0.1
+  integrator:
+    model: "gemini/gemini-1.5-flash"
+    fallback_model: "gpt-4o-mini"
+    prompt_version: "v1"
+    temperature: 0.0
+  fixer:
+    model: "gemini/gemini-1.5-flash"
+    fallback_model: "gpt-4o-mini"
+    prompt_version: "v1"
+    temperature: 0.1
+  reviewer:
+    model: "gemini/gemini-1.5-flash"
+    fallback_model: "gpt-4o-mini"
+    prompt_version: "v1"
+    temperature: 0.2
+  deployer:
+    model: "gemini/gemini-1.5-flash"
+    fallback_model: "gpt-4o-mini"
+    prompt_version: "v1"
+    temperature: 0.0
+
+benchmark:
+  baseline_model: "gpt-4o"
+  candidate_models:
+    - "gemini/gemini-1.5-flash"
+    - "gemini/gemini-1.5-pro"
+    - "gpt-4o-mini"
+    - "gpt-4o"
+    - "claude-3-5-sonnet-20241022"
